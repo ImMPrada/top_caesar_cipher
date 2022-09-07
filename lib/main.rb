@@ -10,11 +10,12 @@ end
 def caesar_cipher(string, shift)
   memory = {}
 
-  string.split('').map do |char|
+  string.split('').map do |native_char|
+    char = native_char.downcase
     result = memory[char]
     result ||= ALPHABET.include?(char) ? change_letter(char, shift) : char
     memory[char] = result
 
-    result
+    native_char != char ? result.upcase! : result
   end.join
 end
