@@ -1,3 +1,5 @@
+require 'byebug'
+
 ALPHABET = ('a'..'z').to_a.freeze
 
 def change_letter(letter, shift)
@@ -12,10 +14,11 @@ def caesar_cipher(string, shift)
 
   string.split('').map do |native_char|
     char = native_char.downcase
+
     result = memory[char]
     result ||= ALPHABET.include?(char) ? change_letter(char, shift) : char
     memory[char] = result
 
-    native_char != char ? result.upcase! : result
+    native_char != char ? result.upcase : result
   end.join
 end
