@@ -8,4 +8,12 @@ A challenge on [Odin project](https://www.theodinproject.com/lessons/ruby-caesar
 
 This solution contains a MEMORY hash to store the ciphered value of a letter, in order to return fast when it is a repeated letter on the string
 
-enjoy!
+
+### How to try
+
+- clone the repo
+- got to de repo's folder on your machine
+- this repo solution is using Ruby 3.1.2, if you are using rbenv: `rbenv local 3.1.2`
+- run `bundle install`, this allows you to run specs
+- solution propoused is at lib/
+- to run specs: `rspec`
